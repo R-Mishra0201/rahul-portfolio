@@ -47,14 +47,14 @@ export default function About() {
   ];
 
   const techStack = [
-    { name: "React", color: "text-blue-400" },
-    { name: "Next.js", color: "text-white" },
-    { name: "Node.js", color: "text-green-400" },
+    { name: "React Js", color: "text-blue-400" },
+    { name: "Next Js", color: "text-black" },
+    { name: "Node Js", color: "text-green-400" },
     { name: "Prisma", color: "text-indigo-400" },
     { name: "TypeScript", color: "text-blue-500" },
     { name: "Python", color: "text-yellow-400" },
     { name: "AI/ML", color: "text-neon-cyan" },
-    { name: "AWS", color: "text-orange-400" }
+    { name: "SQL", color: "text-orange-400" }
   ];
 
   return (
@@ -113,7 +113,7 @@ export default function About() {
               <motion.div
                 key={tech.name}
                 initial={{ opacity: 0, scale: 0 }}
-                animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                animate={isInView ? { opacity: 2, scale: 1 } : {}}
                 transition={{ duration: 0.5, delay: 0.05 * index }}
                 whileHover={{ y: -5, scale: 1.05 }}
                 className="glass glass-hover px-6 py-3 rounded-full magnetic"

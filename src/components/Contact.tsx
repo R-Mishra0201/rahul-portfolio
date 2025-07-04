@@ -65,19 +65,19 @@ export default function Contact() {
     {
       icon: Mail,
       title: "Email",
-      value: "john@example.com",
-      href: "mailto:john@example.com"
+      value: "rm9193421@gmail.com",
+      href: "rm9193421@gmail.com"
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+1 (555) 123-4567",
+      value: "+91 95993 67759",
       href: "tel:+15551234567"
     },
     {
       icon: MapPin,
       title: "Location",
-      value: "San Francisco, CA",
+      value: "New Delhi , India",
       href: "#"
     }
   ];
@@ -144,7 +144,7 @@ export default function Contact() {
                   whileTap={{ scale: 0.95 }}
                   className="glass glass-hover p-4 rounded-full neon-glow magnetic"
                 >
-                  <span className="text-neon-cyan font-semibold">{social[0]}</span>
+                  <span className="text-neon-cyan font-semibold">{social}</span>
                 </motion.a>
               ))}
             </motion.div>

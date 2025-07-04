@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -55,14 +56,10 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Modern vibrant theme colors
-				vibrant: {
-					purple: '#9333ea',
-					pink: '#ec4899',
-					orange: '#f97316',
-					blue: '#3b82f6',
-					green: '#10b981',
-				}
+				// Dark neon theme colors
+				'neon-cyan': '#22d3ee',
+				'neon-purple': '#8b5cf6',
+				'neon-pink': '#ec4899',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -91,8 +88,8 @@ export default {
 					'50%': { transform: 'translateY(-20px)' }
 				},
 				'glow': {
-					'0%, 100%': { boxShadow: '0 8px 32px rgba(147, 51, 234, 0.2)' },
-					'50%': { boxShadow: '0 16px 48px rgba(147, 51, 234, 0.3)' }
+					'0%, 100%': { boxShadow: '0 8px 32px rgba(139, 92, 246, 0.3)' },
+					'50%': { boxShadow: '0 16px 48px rgba(139, 92, 246, 0.4)' }
 				},
 				'magnetic': {
 					'0%, 100%': { transform: 'scale(1)' },
