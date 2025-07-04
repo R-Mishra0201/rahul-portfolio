@@ -56,11 +56,12 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Premium theme colors
-				neon: {
-					cyan: '#00f5ff',
-					purple: '#8b5cf6',
-					pink: '#f471b5',
+				// Modern vibrant theme colors
+				vibrant: {
+					purple: '#9333ea',
+					pink: '#ec4899',
+					orange: '#f97316',
+					blue: '#3b82f6',
 					green: '#10b981',
 				}
 			},
@@ -91,8 +92,8 @@ export default {
 					'50%': { transform: 'translateY(-20px)' }
 				},
 				'glow': {
-					'0%, 100%': { boxShadow: '0 0 20px rgba(0, 245, 255, 0.3)' },
-					'50%': { boxShadow: '0 0 40px rgba(0, 245, 255, 0.6)' }
+					'0%, 100%': { boxShadow: '0 8px 32px rgba(147, 51, 234, 0.2)' },
+					'50%': { boxShadow: '0 16px 48px rgba(147, 51, 234, 0.3)' }
 				},
 				'magnetic': {
 					'0%, 100%': { transform: 'scale(1)' },

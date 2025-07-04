@@ -49,13 +49,13 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black overflow-x-hidden">
+    <div className="relative min-h-screen bg-gradient-to-br from-purple-50 via-white to-pink-50 overflow-x-hidden">
       {/* Sticky Navigation */}
       <StickyNavigation />
       
       {/* Gradient Overlays */}
-      <div className="fixed inset-0 bg-gradient-to-br from-neon-cyan/10 via-transparent to-neon-purple/10 pointer-events-none" />
-      <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-neon-cyan/5 via-transparent to-transparent pointer-events-none" />
+      <div className="fixed inset-0 bg-gradient-to-br from-purple-100/30 via-transparent to-pink-100/30 pointer-events-none" />
+      <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-200/20 via-transparent to-transparent pointer-events-none" />
       
       {/* Main Content */}
       <main>
@@ -77,7 +77,7 @@ const Index = () => {
       </main>
       
       {/* Footer */}
-      <footer className="py-8 text-center text-muted-foreground border-t border-white/10">
+      <footer className="py-8 text-center text-muted-foreground border-t border-purple-200">
         <div className="container mx-auto px-6">
           <p>&copy; 2024 John Doe. Crafted with passion and cutting-edge tech.</p>
         </div>
