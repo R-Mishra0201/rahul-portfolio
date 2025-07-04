@@ -1,12 +1,91 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import ThreeBackground from '../components/ThreeBackground';
+import Hero from '../components/Hero';
+import About from '../components/About';
+import Projects from '../components/Projects';
+import Contact from '../components/Contact';
+import StickyNavigation from '../components/StickyNavigation';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Index = () => {
+  useEffect(() => {
+    // GSAP ScrollTrigger animations
+    gsap.fromTo(
+      '.fade-in-up',
+      { y: 100, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: '.fade-in-up',
+          start: 'top 80%',
+          end: 'bottom 20%',
+          toggleActions: 'play none none reverse'
+        }
+      }
+    );
+
+    // Parallax effect for sections
+    gsap.to('.parallax-bg', {
+      yPercent: -50,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.parallax-bg',
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: true
+      }
+    });
+
+    // Cleanup
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="relative min-h-screen bg-background overflow-x-hidden">
+      {/* Three.js Background */}
+      <ThreeBackground />
+      
+      {/* Sticky Navigation */}
+      <StickyNavigation />
+      
+      {/* Gradient Overlays */}
+      <div className="fixed inset-0 bg-gradient-to-br from-background via-background/95 to-background pointer-events-none -z-10" />
+      <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-neon-cyan/5 via-transparent to-transparent pointer-events-none -z-10" />
+      
+      {/* Main Content */}
+      <main>
+        <section id="home">
+          <Hero />
+        </section>
+        
+        <section id="about" className="fade-in-up">
+          <About />
+        </section>
+        
+        <section id="projects" className="fade-in-up">
+          <Projects />
+        </section>
+        
+        <section id="contact" className="fade-in-up">
+          <Contact />
+        </section>
+      </main>
+      
+      {/* Footer */}
+      <footer className="py-8 text-center text-muted-foreground border-t border-white/10">
+        <div className="container mx-auto px-6">
+          <p>&copy; 2024 John Doe. Crafted with passion and cutting-edge tech.</p>
+        </div>
+      </footer>
     </div>
   );
 };
