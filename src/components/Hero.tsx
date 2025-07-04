@@ -70,7 +70,7 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-5xl lg:text-7xl font-bold mb-6"
             >
-              <span className="text-gradient">John Doe</span>
+              <span className="text-gradient">Rahul Mishra</span>
             </motion.h1>
             
             <motion.p
