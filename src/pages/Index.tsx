@@ -2,7 +2,6 @@
 import { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import ThreeBackground from '../components/ThreeBackground';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import Projects from '../components/Projects';
@@ -50,16 +49,13 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-background overflow-x-hidden">
-      {/* Three.js Background */}
-      <ThreeBackground />
-      
+    <div className="relative min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black overflow-x-hidden">
       {/* Sticky Navigation */}
       <StickyNavigation />
       
       {/* Gradient Overlays */}
-      <div className="fixed inset-0 bg-gradient-to-br from-background via-background/95 to-background pointer-events-none -z-10" />
-      <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-neon-cyan/5 via-transparent to-transparent pointer-events-none -z-10" />
+      <div className="fixed inset-0 bg-gradient-to-br from-neon-cyan/10 via-transparent to-neon-purple/10 pointer-events-none" />
+      <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-neon-cyan/5 via-transparent to-transparent pointer-events-none" />
       
       {/* Main Content */}
       <main>
