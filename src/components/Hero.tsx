@@ -34,8 +34,8 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-full blur-xl animate-pulse" />
               <div className="relative w-full h-full glass rounded-full p-2 modern-glow">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
-                  alt="John Doe - Full Stack Developer"
+                  src=""
+                  alt="Rahul Mishra - Full Stack Developer"
                   className="w-full h-full object-cover rounded-full"
                 />
               </div>
