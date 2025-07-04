@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -42,7 +41,6 @@ const Index = () => {
       }
     });
 
-    // Cleanup
     return () => {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
@@ -56,6 +54,7 @@ const Index = () => {
       {/* Gradient Overlays */}
       <div className="fixed inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-cyan-900/20 pointer-events-none" />
       <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-transparent pointer-events-none" />
+      
       {/* Main Content */}
       <main>
         <section id="home">
@@ -76,7 +75,7 @@ const Index = () => {
       </main>
       
       {/* Footer */}
-      <footer className="py-8 text-center text-muted-foreground border-t border-purple-200">
+      <footer className="py-8 text-center text-muted-foreground border-t border-white/10">
         <div className="container mx-auto px-6">
           <p>&copy; 2024 Rahul Mishra. Crafted with passion and cutting-edge tech.</p>
         </div>
